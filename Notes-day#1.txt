@@ -1,0 +1,251 @@
+HTTP
+
+--> hypertext transfer protocol
+--> it transfers data, text, files, images between client & server
+--> unsecured protocol [plain text/readable clear text]
+--> it cannot guarantee 100% transfer of data
+
+eg. http://plugins.katalon.com/
+      http://www.ignou.ac.in/
+===============
+
+HTTPS
+
+--> hypertext transfer protocol with SECURITY
+--> it transfers data, text, files, images between client & server
+--> secured protocol [encrypted text/unreadable masked text]
+--> it guarantees 100% transfer of data
+
+UN: KJKHiuyJHB896&^%476786&^$^%^&*^hjg87678YGYG&^%
+PWD: KHkjh897*&^&*897^%&^&ubh*o&tugk
+
+--> this uses cryptographic protocols such as SSL or TLS
+
+SSL - secure sockets layer [outdated]
+TLS - transport layer security [advanced]
+
+HTTP + SSL = HTTPS
+or
+HTTP + TLS = HTTPS
+
+eg. https://www.ibsplc.com/
+
+================
+
+HTTP METHODs
+
+to reveal the type of client request, we use HTTP method
+
+GET --> to retrieve/read/fetch the exisitng data from the database/server
+
+eg. visiting any website, blog, reading emails, messages
+
+POST --> to create new data in the database/server
+
+eg. sign-up process, sending messages/emails, file uploads
+
+PUT --> to update/modify/replace the existing data on the server/database
+
+eg. change password, edit profile
+
+DELETE --> to delete the existing data on the server/database
+
+eg. deleting emails, messages, deactivating email accounts, social media accounts
+
+=================
+
+REQUEST HEADERS
+
+this is the additional meta-data sent by client to the server, along with client request
+
+USER-AGENT --> Windows 10 OS + chrome + v98
+CONNECTION --> keep-alive
+ACCEPT-LANG --> EN-US, EN-IND, hindi-ind
+ACCEPT --> html, xml, image/jpeg, image/png [this is what client wishes to receive from the server]
+CONTENT-TYPE --> json [this is the format in which client is sending the data to the server]
+
+==============
+
+RESPONSE HEADERS
+
+this is the additional meta-data sent by server to the client, along with response body
+
+CONNECTION --> close
+ACCEPT-LANG --> EN-US
+CONTENT-TYPE --> html, image/jpeg, image/png
+SET-COOKIE: <cookie-details> name, value, domain, path, expiry, isHTTP, isSecure
+CACHE: no-store ; no-cache ; must re-validate
+
+==================
+
+RESPONSE CODE
+
+it is a 3 digit code sent by server to the client, to reveal the status of client request
+
+response codes range: {100-599}
+
+100 - 199 ==> 1xx ==> informational response
+
+200 - 299 ==> 2xx ==> successsful response
+
+300 - 399 => 3xx ==> redirectional response
+
+400 - 499 ==> 4xx ==> client side error
+
+500 - 599 ==> 5xx ==> server side error
+
+========================
+
+===============================
+INFORMATION GATHERING PHASE
+===============================
+
+target ==> the AUT that you would like to explore & conduct security testing
+
+challenge#1: Explore APPLICATION TECHNOLOGY DETAILS
+
+(a) Wappalyzer --> Chrome plugin
+(b) WhatRuns --> Chrome plugin
+https://www.whatruns.com/website/ibsplc.com
+https://www.whatruns.com/website/google.com
+(c) BuiltWith --> Chrome plugin OR website
+(d) Webspotter technology checker & email lookup - Chrome plugin
+
+challenge#2: find the open ports in the target
+
+(a) Shodan --> Chrome plugin
+(b) Nmap --> 
+
+challenge#3: Find the IP address of the target server
+
+(a) Shodan --> Chrome plugin
+
+35.214.217.147
+
+104.21.59.93
+
+18.65.229.7
+
+challenge#4: Find the server hosting details
+
+https://whois.domaintools.com/
+https://whois.domaintools.com/mindmajix.com
+https://reverseip.domaintools.com/search/?q=mindmajix.com
+
+challenge#5: Find the SSL or TLS version used
+
+SSL = outdated
+TLS = latest
+v1.0 --> attacks possible [poodle or beast attacks]
+v1.1 --> attacks possible [poodle or beast attacks]
+v1.2 --> attacks possible [poodle or beast attacks]
+v1.3 ==> latest
+
+https://www.ssllabs.com/ssltest/
+
+https://the-internet.herokuapp.com/
+
+http://the-internet.herokuapp.com/
+
+Strict Transport Security (HSTS)	No //this is a bug
+=======================================
+
+NMap  ==> to identify & scan the ports on the target AUT, we use nmap tool i.e., network mapper tool
+
+download nmap from below:
+
+    https://nmap.org/download#windows
+​    https://nmap.org/zenmap/
+
+nmap -v
+nmap -h
+nmap localhost
+nmap 216.239.34.21
+nmap 107.22.57.98
+
+nmap localhost 216.239.34.21 107.22.57.98
+nmap -oN nmapScanReport.txt localhost 216.239.34.21 107.22.57.98
+nmap -F 35.214.217.147
+
+nmap -v 35.214.217.147
+
+nmap -sv 35.214.217.147
+
+nmap -O localhost
+
+if ttl value is around <=60-70, it is LINUX OS
+if ttl value is beyond 120, it is WINDOWS OS 
+
+refer https://ostechnix.com/identify-operating-system-ttl-ping/#:~:text=Detect%20remote%20host's%20operating%20system,discarding%20the%20packet%20or%20data.
+
+nmap -p 3000-4000 localhost
+
+nmap -top-ports 5 35.214.217.147
+
+nmap -traceroute 35.214.217.147
+
+nmap -A 35.214.217.147
+
+
+=================
+
+Vulnerabilities ==> these are the exploit areas by a hacker/security test engineer. These are the weak func areas on your AUT at the server side.
+
+Download Vooki tool from https://www.vegabird.com/vooki/
+
+Sample REST APIs
+
+GET https://fakestoreapi.com/products
+
+GET https://fakestoreapi.com/products/1
+
+GET https://fakestoreapi.com/products/categories
+
+GET https://fakestoreapi.com/products/category/jewelery
+
+GET https://fakestoreapi.com/products?limit=5
+
+CVSS = common vulnerability scoring system
+CVSS = {0-10}
+
+Add the RESTful APIs to the vooki tool under project --> scan the APIs --> Analyze the report --> Generate the HTML report
+
+-------
+
+SOAP APIs ==>
+
+POST https://example.com/v1/allUsers
+
+201 Created
+
+DELETE https://example.com/v1/allUsers
+
+405 method not allowed
+
+https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-3091/version_id-457051/Microsoft-Asp.net-2.0.html
+
+https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-3427/Microsoft-Internet-Information-Services.html
+
+----------
+
+Web Scanner feature in Vooki tool
+
+--> Domain scannner & host scanner
+
+--> ssl scannner
+
+--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

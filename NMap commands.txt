@@ -1,0 +1,70 @@
+nmap --help
+
+nmap 192.168.0.1 //scan a single target
+
+nmap 192.168.0.1 192.168.0.2 // scan multiple targets
+
+nmap 192.168.0.1-10 //scan a range of hosts
+
+nmap -F 192.168.0.1 //to perform fast scan
+
+nmap -v 192.168.0.1 // verbose output
+
+nmap –open 192.168.0.1 // only display open ports
+
+
+To run a ping scan, run the following command:
+# nmap -sp 192.100.1.1/24
+
+To run a host scan, use the following command:
+# nmap -sp <target IP range>
+
+To run an OS scan, use the following command:
+# nmap -O <target IP>
+
+nmap -sV localhost //detection of services & versions
+
+nmap -p 8080
+nmap -A ip-address
+
+nmap ibsplc.com
+
+nmap -p 0-65535 localhost
+
+nmap -p 1-65535 localhost
+
+nmap -p 21-25,80,139,8080 192.168.1.1 //to scan specific ports
+
+nmap -p ftp,http* 192.168.0.1 // scan ports by port name
+
+nmap -p ‘*’ 192.168.0.1 // scan all ports
+
+nmap -r 192.168.0.1 // scan sequential port scan
+
+nmap cloudflare.com
+
+nmap -sp 192.168.5.0/24 //host detection
+
+nmap 1.1.1.1 8.8.8.8 //multiple ip address scan
+
+nmap -p 8.8.8.0/28 //multiple ip range
+
+nmap –top-ports 20 192.168.1.106 //top 20 ports
+
+nmap -iL list.txt //input coming from text file
+
+nmap -oN output.txt securitytrails.com //save result to a file
+
+nmap -oX output.xml securitytrails.com //save results to xml file
+
+nmap -Pn –script vuln 192.168.1.105 //use nmap for cve detection
+
+nmap -A 192.168.0.1 //to perform aggressive scan
+
+nmap –traceroute 192.168.0.1 // to get trace route
+
+
+
+
+
+

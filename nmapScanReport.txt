@@ -1,0 +1,26 @@
+# Nmap 7.92 scan initiated Thu Feb 24 14:29:29 2022 as: nmap -oN nmapScanReport.txt localhost 216.239.34.21 107.22.57.98
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00076s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+5357/tcp open  wsdapi
+
+Nmap scan report for any-in-2215.1e100.net (216.239.34.21)
+Host is up (0.045s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for ec2-107-22-57-98.compute-1.amazonaws.com (107.22.57.98)
+Host is up (0.30s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Thu Feb 24 14:29:50 2022 -- 3 IP addresses (3 hosts up) scanned in 20.60 seconds

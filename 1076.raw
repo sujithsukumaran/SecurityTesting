@@ -1,0 +1,39 @@
+Message-Id: <10569.112863@fatcity.com>
+From: "Luo, Kitty" <Kitty.Luo@ttc.ca>
+Date: Tue, 25 Jul 2000 08:48:56 -0400
+Subject: RE: Report Server working on the web?
+
+You may consider to use Oracle Report 6i and Report Server 6i. It's very
+easy to develop reports and easy to deploy them on web.I suggest you to read
+this manual: Oracle Reports Developer: Publishing Reports (Release 6i).
+
+Kitty Luo
+TTC
+ 
+
+> -----Original Message-----
+> From:	prem@ibsplc.com [SMTP:prem@ibsplc.com]
+> Sent:	Tuesday, July 25, 2000 1:59 AM
+> To:	Multiple recipients of list ORACLE-L
+> Subject:	RE: Report Server working on the web?
+> 
+> Hi everyone,
+>      Can anybody suggest to me a good tool for developing reports on the
+> web.
+>      The database(Oracle) is running on a Unix platform.
+> 
+> Prem
+> 
+> 
+> -- 
+> Author: 
+>   INET: prem@ibsplc.com
+> 
+> Fat City Network Services    -- (858) 538-5051  FAX: (858) 538-5051
+> San Diego, California        -- Public Internet access / Mailing Lists
+> --------------------------------------------------------------------
+> To REMOVE yourself from this mailing list, send an E-Mail message
+> to: ListGuru@fatcity.com (note EXACT spelling of 'ListGuru') and in
+> the message BODY, include a line containing: UNSUB ORACLE-L
+> (or the name of mailing list you want to be removed from).  You may
+> also send the HELP command for other information (like subscribing).

@@ -1,0 +1,25 @@
+ANDROID APK SCAN & REVERSE ENGINEERING
+
+(i) Download Yaazhini tool
+	https://www.vegabird.com/yaazhini/
+(ii) Install the Yaazhini tool
+(iii) Download APK file online using APK-PURE, APK Extractor, APK Download websites
+	https://m.apkpure.com/
+	https://apk-dl.com/
+(iv) Launch Yaazhini tool and upload APK and click on Scan
+(v) The android apk security scan starts and the report is generated
+
+sample apk for download:
+v
+
+================
+
+To download Dex2Jar tool, refer https://sourceforge.net/projects/dex2jar/
+
+To download Java Decompiler, refer
+http://java-decompiler.github.io/
+
+click on jd-gui-windows-1.6.6.zip
+
+to convert .dex files to .jar files, we use Dex2Jar tool
+to conver .jar files to .java files, we use Java Decompiler tool

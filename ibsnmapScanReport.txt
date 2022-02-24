@@ -1,0 +1,26 @@
+# Nmap 7.92 scan initiated Thu Feb 24 14:35:50 2022 as: nmap -oN ibsnmapScanReport.txt -v 35.214.217.147
+Nmap scan report for 147.217.214.35.bc.googleusercontent.com (35.214.217.147)
+Host is up (0.24s latency).
+Not shown: 981 filtered tcp ports (no-response), 1 filtered tcp ports (port-unreach)
+PORT      STATE  SERVICE
+20/tcp    closed ftp-data
+21/tcp    open   ftp
+53/tcp    open   domain
+80/tcp    open   http
+81/tcp    closed hosts2-ns
+110/tcp   open   pop3
+143/tcp   open   imap
+443/tcp   open   https
+465/tcp   open   smtps
+587/tcp   open   submission
+993/tcp   open   imaps
+995/tcp   open   pop3s
+2525/tcp  open   ms-v-worlds
+3306/tcp  open   mysql
+5432/tcp  open   postgresql
+34571/tcp closed unknown
+34572/tcp closed unknown
+34573/tcp closed unknown
+
+Read data files from: C:\Program Files (x86)\Nmap
+# Nmap done at Thu Feb 24 14:36:22 2022 -- 1 IP address (1 host up) scanned in 31.90 seconds

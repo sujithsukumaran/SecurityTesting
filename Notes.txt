@@ -1,0 +1,115 @@
+INFORMATION GATHERING PHASE
+
+(i) Technology stack
+(ii) Operating system
+(iii) Server details
+(iv) shared hosting or dedicated hosting
+(v) what ports are being used and their status
+(vi) port scan
+
+TECHNOLOGY STACK
+
+--> builtWith --> chrome plugin OR web browser
+
+--> whatRuns --> chrome plugin [installed, inspected, emailed, https://www.whatruns.com/website/incedoinc.com]
+
+--> Wapalyzer --> chrome plugin [installed, inspected, exported the test report.csv]
+etc
+
+--> Webspotter technology checker & email lookup  --> Chrome plugin [installed, inspected]
+
+
+Target ==> this is the AUT [application under test]
+
+
+Bug#1 : The tech stack details are exposed to public users in https://www.incedoinc.com
+
+Bug#2: The email address of the company employees is exposed to public users in https://incedoinc.com
+
+====================
+
+operating system detection
+
+refer : https://subinsb.com/default-device-ttl-values/
+
+https://ostechnix.com/identify-operating-system-ttl-ping/
+
+TTL -- time to live
+
+TTL ~ < = 60-70 ==> Linux OS
+
+TTL  ~ > 110 ==> Windows OS
+
+The default initial TTL value for Linux/Unix is 64, and TTL value for Windows is 128.
+
+
+Use the PING utility in COMMAND PROMPT and identity the TTL value to know the OS of the server, where the target AUT is hosted
+
+=======================
+
+Server details
+
+visit https://whois.domaintools.com/ to get the target AUT server details
+
+visit https://www.yougetsignal.com
+
+server ip: 52.5.164.217
+Apache/2.4.18 (Ubuntu)
+AWS-Virginia, USA
+
+Bug#3: The target AUT is redirected to domain name when executed with ip address 52.5.164.217
+
+Bug#4: The OS and the server details are exposed to public users during server details detection technique in info gather phase
+
+=========================
+
+Port: A port signifies the functionality/service that the AUT can offer
+
+port numbers range is 0 to 65345
+
+port 1 to 1024 ==> frequenlty ports being used
+
+Well-known ports range from 0 through 1023.
+Registered ports are 1024 to 49151.
+Dynamic ports (also called private ports) are 49152 to 65535.
+
+https://www.webopedia.com/reference/well-known-tcp-port-numbers/#:~:text=Port%20numbers%20range%20from%200,designated%20as%20well%2Dknown%20ports.
+
+port = 22 = ssh
+port = 80 = http
+port = 443 = https
+port = 21= ftp
+port = 25, 465, 587, 2525 = smtp
+
+port status = OPEN, CLOSED, BLOCKED, UNAVAILABLE
+
+shodan app --> chrome plugin
+
+find port numbers which are used
+
+find which version of https [ssl/tls] is being used
+
+find any vulnerabilties in the frameworks used 
+
+shodan.io
+
+HTTP(s)
+
+s = SSL [deprecated] or TLS [latest]
+
+TLS v1.0 [buggy]
+v1.1 [buggy]
+v1.2 [buggy]
+v1.3 [latest]
+
+Bug#5: TLSv1.2 is used for the AUT [incedoinc.com] instead of using the latest version of TLS which is v1.3
+
+https://www.ssllabs.com/ssltest/index.html
+
+============
+
+
+
+
+
+

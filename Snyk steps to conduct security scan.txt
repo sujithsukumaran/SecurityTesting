@@ -1,0 +1,14 @@
+Create an account in Github
+Login to Github
+Fork an existing project from Github repo list
+Signup to Snyk using Github account
+Login to Snyk
+Add project in Snyk via ADD PROJECT --> GITHUB
+the scan starts automatically
+analyze the vulnerabilities
+click on fix vulnerability for any 1 issue
+approve the PR
+merge the PR
+confirm the PR
+retest the project via SNYK tool
+observe that the vulnerablities count decreases
